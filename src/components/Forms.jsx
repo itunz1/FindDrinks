@@ -14,14 +14,12 @@ const Forms = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(Object.values(search).includes(""));
     if (Object.values(search).includes("")) {
       setAlert("Please fill in all fields");
       return;
     }
     setAlert("");
     searchDrinks(search);
-    console.log(drinks);
   };
 
   return (
