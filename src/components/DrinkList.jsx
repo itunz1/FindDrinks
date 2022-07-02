@@ -6,7 +6,7 @@ const DrinkList = () => {
   const { drinks } = useDrinks();
   console.log(drinks);
   return (
-    <Row>
+    <Row className="mt-5">
       {drinks.map((drink) => (
         <Drink key={drink.idDrink} drink={drink} />
       ))}
