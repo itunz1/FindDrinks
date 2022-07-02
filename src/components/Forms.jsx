@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Form, Row, Col, Alert } from "react-bootstrap";
 import useCategories from "../hooks/useCategories";
+import useDrinks from "../hooks/useDrinks";
 
 const Forms = () => {
   const [search, setSearch] = useState({
@@ -9,6 +10,7 @@ const Forms = () => {
   });
   const [alert, setAlert] = useState("");
   const { categories } = useCategories();
+  const { searchDrinks, drinks } = useDrinks();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +20,8 @@ const Forms = () => {
       return;
     }
     setAlert("");
+    searchDrinks(search);
+    console.log(drinks);
   };
 
   return (
