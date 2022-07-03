@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import Form from "./components/Forms";
 import DrinkList from "./components/DrinkList";
+import DrinkModal from "./components/DrinkModal";
 import { CategoriesProvider } from "./context/CategoriesProvider";
 import { DrinksProvider } from "./context/DrinksProvider";
 
@@ -16,6 +17,7 @@ function App() {
           <Container className="mt-5">
             <Form />
             <DrinkList />
+            <DrinkModal />
           </Container>
         </DrinksProvider>
       </CategoriesProvider>
